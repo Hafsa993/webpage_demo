@@ -1,1 +1,82 @@
+<!doctype html>
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Flexbox Layout</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .item {
+            flex-grow: 1;
+            height: 100px;
+            border: dashed 1px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            width: 4ex;
+            font-size: 100px;
+            background-color: white;
+            transform: rotate(8deg);
+            transform-origin: 2ex 1ex;
+            transition: transform 1s;
+        }
+
+        .logo:hover {
+            transform: rotate(360deg);
+            transition: transform 5s;
+        }
+        .red {
+            position: absolute;
+            top: 250px;
+            left: 30px;
+            width: 4ex;
+            font-size: 100px;
+            background-color: white;
+            transform: rotate(8deg);
+            transform-origin: 2ex 1ex;
+            transition: transform 1s;
+        }
+
+        .red:hover {
+            transform: rotate(360deg);
+            transition: transform 5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        ETH
+    </div>
+    <div class="red">
+        RED
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', e => {
+   let el = document.querySelector(".logo");
+   el.style.color="blue";
+   el.style.border="solid 39px grey";
+    el.style.backgroundColor="lightgray";
+});
+
+jQuery(document).ready(function(){
+jQuery("div.red").css('color','red');
+});
+
+</script>
+
+</html>
+
+</script>
+
+</html>
