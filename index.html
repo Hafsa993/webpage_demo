@@ -1,10 +1,39 @@
+
 <!doctype html>
+<html>
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Flexbox Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Web Page</title>
     <style>
+        h1 {
+            background-color: rgb(231, 231, 245);
+            color: red;
+            font-size: 50px;
+            font-weight: 200;
+            font-style: sans-serif;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 5px solid rgba(0, 255, 234, 0.501);
+            padding: 8px;
+            text-align: center;
+        }
+
+        p {
+            background-color: rgba(202, 121, 7, 0.14);
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+        }
+
         .container {
             display: flex;
             gap: 10px;
@@ -19,7 +48,7 @@
         .logo {
             position: absolute;
             top: 20px;
-            left: 80px;
+            left: 30px;
             width: 4ex;
             font-size: 100px;
             background-color: white;
@@ -32,10 +61,11 @@
             transform: rotate(360deg);
             transition: transform 5s;
         }
+
         .red {
             position: absolute;
             top: 250px;
-            left: 390px;
+            left: 30px;
             width: 4ex;
             font-size: 100px;
             background-color: white;
@@ -52,15 +82,122 @@
 </head>
 
 <body>
-    <div class="logo">
-        ETH
-    </div>
-    <div class="red">
-        RED
-    </div>
-</body>
-</html>
+    <div class="logo">ETH</div>
+    <div class="red">RED</div>
 
-</script>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Welcome to My Web Page</h2>
+            </div>
+        </div>
+    </div>
+    <h1>My Web Page</h1>
+    <p class="person">This is a paragraph with a class.</p>
+    <p id="copyright">This is a paragraph with an id.</p>
+    <p>The first paragraph is the most <em>important</em>.</p>
+    <p>The second paragraph is the most <em>important</em>.</p>
+    <p>The third paragraph is the most <em>important</em>.</p>
+    <p>The fourth paragraph is the most <em>important</em>.</p>
+    <p>The fifth paragraph is the most <em>important</em>.</p>
+    <p>The sixth paragraph is the most <em>important</em>.</p>
+    <!-- This is a comment. It will not be displayed in the browser. -->
+    <p>The seventh paragraph is the most <em>important</em>.</p>
+    <p>The eighth paragraph is the most <em>important</em>.</p>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td><a href="https://www.google.com">Link</a></td>
+            <td><a href="https://www.google.com">Link</a></td>
+            <td><a href="https://www.google.com">Link</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.google.com">Link</a></td>
+            <td><a href="https://www.google.com">Link</a></td>
+            <td><a href="https://www.google.com">Link</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.google.com">Link</a></td>
+            <td><a href="https://www.google.com">Link</a></td>
+            <td><a href="https://www.google.com">Link</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.google.com">Link</a></td>
+            <td><a href="https://www.google.com">Link</a></td>
+            <td><a href="https://www.google.com">Link</a></td>
+        </tr>
+    </table>
+     <p>This is a random photo: <a href="https://www.google.com">link</a>.</p>
+    <img src="https://picsum.photos//240/300" alt="Happy" />
+
+    <p>This is a paragraph with a <a href="https://www.google.com">link</a>.</p>
+    <a href="https://www.google.com">Link</a>
+
+    <!-- a comment inside your document -->
+
+    <pre>
+            This is preformatted text.
+            It preserves whitespace and line breaks.
+        </pre>
+
+    <blockquote>
+        This is a blockquote. It is used to indicate the quotation of a large section of text from another source.
+    </blockquote>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>äö
+    </ul>
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ol>
+    <div>
+        <p>This is a paragraph inside a div.</p>
+    </div>
+
+    <span>This is a span element.</span>
+    <br />
+    <hr />
+    <strong>This text is strong.</strong>
+
+    <em>This text is emphasized.</em>
+
+    <code>This is a code snippet.</code>
+
+    <ul>
+        <li>Unordered Item 1</li>
+        <li>Unordered Item 2</li>
+        <li>Unordered Item 3</li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', e => {
+            let el = document.querySelector(".logo");
+            el.style.color = "blue";
+            el.style.border = "solid 39px grey";
+            el.style.backgroundColor = "lightgray";
+        });
+
+        jQuery(document).ready(function () {
+            jQuery("div.red").css('color', 'red');
+        });
+    </script>
+</body>
+
+</html>
 
 </html>
